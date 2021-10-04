@@ -1,12 +1,16 @@
 package application;
 
-import BatteryUtil.GetBattery;
+import BatteryUtil.Battery;
 
 public class MainTest {
     public static void main(String[] args) {
 
-        GetBattery getBattery = new GetBattery();
+        int [][] events = new int[][]{{10, -20, 61, -15}, {30, 40, -90, -15}};
 
-        System.out.println("Valor final da bateria: " + getBattery.newBattery());
+        Battery battery = new Battery();
+
+        int result = battery.getBattery(events);
+
+        System.out.println("Valor final da bateria: " + result );
     }
 }
